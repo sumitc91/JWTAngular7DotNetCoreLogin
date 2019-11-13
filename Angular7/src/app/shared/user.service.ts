@@ -42,4 +42,8 @@ export class UserService {
     };
     return this.http.post(environment.apiBaseURI + '/ApplicationUser/Register', body);
   }
+
+  login(formData){
+    return this.http.post(environment.apiBaseURI + '/ApplicationUser/Login', formData);
+  }
 }

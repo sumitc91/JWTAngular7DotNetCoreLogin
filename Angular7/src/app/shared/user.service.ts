@@ -47,8 +47,7 @@ export class UserService {
     return this.http.post(environment.apiBaseURI + '/ApplicationUser/Login', formData);
   }
 
-  getUserProfile(){
-    var tokenHeader = new HttpHeaders({'Authorization':'Bearer '+localStorage.getItem('token')});
-    return this.http.get(environment.apiBaseURI+'/UserProfile',{headers: tokenHeader});
+  getUserProfile(){    
+    return this.http.get(environment.apiBaseURI+'/UserProfile');
   }
 }
